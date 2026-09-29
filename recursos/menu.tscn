@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://bj6pn1stnpr6v"]
+
+[ext_resource type="Script" uid="uid://cqlg6a8qvtqvd" path="res://recursos/menu.gd" id="1_4xhoe"]
+[ext_resource type="Texture2D" uid="uid://8nejdqkk2hky" path="res://recursos/★__ Concept art, Yuichi Mita's Old bedroom __★__Tags__#concept #conceptart #artist #lowbotomy #art (1).jpg" id="2_nednt"]
+[ext_resource type="FontFile" uid="uid://pieybsrw00uo" path="res://recursos/SpookyMagic.ttf" id="3_r6y2l"]
+[ext_resource type="FontFile" uid="uid://bflnw8k8ftw35" path="res://recursos/ChopinScript.otf" id="4_86m8b"]
+[ext_resource type="Texture2D" uid="uid://dwi4ajh1i0dxu" path="res://recursos/OC-removebg-preview.png" id="5_abuin"]
+[ext_resource type="Texture2D" uid="uid://db36emciqv4e0" path="res://recursos/871587334123423218-removebg-preview.png" id="6_nge5h"]
+[ext_resource type="Texture2D" uid="uid://cutayd2ysjnby" path="res://recursos/download__1_-removebg-preview.png" id="7_l5g0s"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ugcfa"]
+texture = ExtResource("2_nednt")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ugcfa"]
+bg_color = Color(0.69304067, 0.58851796, 0.67574245, 1)
+border_color = Color(0.9212824, 0.76183474, 0.6859039, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lpi75"]
+bg_color = Color(0.9275341, 0, 0.19295919, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ymqg7"]
+bg_color = Color(0.90446687, 0.4254339, 0.49483585, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4w4y4"]
+bg_color = Color(0.69304067, 0.58851796, 0.67574245, 1)
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6euy4"]
+bg_color = Color(0.9275341, 0, 0.19295919, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1gees"]
+bg_color = Color(0.90446687, 0.4254339, 0.49483585, 1)
+
+[node name="Menu" type="Control" unique_id=1670114944]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4xhoe")
+
+[node name="Fundo" type="Panel" parent="." unique_id=683427342]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -51.0
+offset_right = 1211.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ugcfa")
+
+[node name="where" type="Label" parent="." unique_id=1616483108]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 32.0
+offset_right = 466.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9490196)
+theme_override_fonts/font = ExtResource("3_r6y2l")
+theme_override_font_sizes/font_size = 134
+text = "Where"
+
+[node name="the" type="Label" parent="." unique_id=1135297812]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 67.0
+offset_right = 738.0
+offset_bottom = 308.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_r6y2l")
+theme_override_font_sizes/font_size = 134
+text = "the"
+
+[node name="hell" type="Label" parent="." unique_id=1352090293]
+layout_mode = 0
+offset_left = 755.0
+offset_top = 67.0
+offset_right = 1053.0
+offset_bottom = 308.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_r6y2l")
+theme_override_font_sizes/font_size = 134
+text = "hell"
+
+[node name="texto2" type="Label" parent="." unique_id=251318410]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 166.0
+offset_right = 1133.0
+offset_bottom = 371.0
+theme_override_colors/font_color = Color(0.84020877, 0.773664, 0.8261439, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9098039)
+theme_override_fonts/font = ExtResource("4_86m8b")
+theme_override_font_sizes/font_size = 136
+text = "is my Cat??"
+
+[node name="Spike" type="Sprite2D" parent="." unique_id=468868499]
+position = Vector2(312, 434.00003)
+scale = Vector2(1.0951988, 1.1193751)
+texture = ExtResource("5_abuin")
+
+[node name="jogar" type="Button" parent="." unique_id=562785556]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 614.0
+offset_top = 21.0
+offset_right = -126.0
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0.49411765)
+theme_override_fonts/font = ExtResource("3_r6y2l")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_ugcfa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lpi75")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ymqg7")
+text = "Jogar"
+
+[node name="sair" type="Button" parent="." unique_id=149458418]
+layout_mode = 0
+offset_left = 614.0
+offset_top = 444.0
+offset_right = 1026.0
+offset_bottom = 539.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_r6y2l")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_4w4y4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6euy4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1gees")
+text = "Sair"
+
+[node name="linha" type="Sprite2D" parent="." unique_id=2017267444]
+position = Vector2(819.75, 444.99997)
+scale = Vector2(0.6193693, 0.74375)
+texture = ExtResource("6_nge5h")
+
+[node name="sparkle" type="Sprite2D" parent="." unique_id=906581519]
+position = Vector2(1086.0001, 565)
+scale = Vector2(0.8049996, 0.977)
+texture = ExtResource("7_l5g0s")
+
+[connection signal="pressed" from="jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="sair" to="." method="_on_sair_pressed"]

@@ -1,0 +1,36 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://cnyx80gjhmsu4"
+path="res://.godot/imported/Milesdane Trial.otf-0dfcd64c57a1a62da9831f6a8589bab1.fontdata"
+
+[deps]
+
+source_file="res://recursos/Milesdane Trial.otf"
+dest_files=["res://.godot/imported/Milesdane Trial.otf-0dfcd64c57a1a62da9831f6a8589bab1.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+modulate_color_glyphs=false
+hinting=3
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

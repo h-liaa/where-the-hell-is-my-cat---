@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dqdl1rshpfjhf"]
+
+[ext_resource type="Texture2D" uid="uid://8nejdqkk2hky" path="res://recursos/★__ Concept art, Yuichi Mita's Old bedroom __★__Tags__#concept #conceptart #artist #lowbotomy #art (1).jpg" id="1_kxg5b"]
+
+[node name="Jogo" type="Node2D" unique_id=1758405476]
+
+[node name="fundo1" type="Sprite2D" parent="." unique_id=1756059833]
+position = Vector2(579.25, 327.5)
+scale = Vector2(1.5802721, 1.3477366)
+texture = ExtResource("1_kxg5b")
