@@ -1,69 +1,14 @@
 [gd_scene format=3 uid="uid://clgid3goukd43"]
 
-[ext_resource type="Texture2D" uid="uid://blax71ngm30q" path="res://personagem/Design_sem_nome__2_-removebg-preview.png" id="1_f50pn"]
-[ext_resource type="Script" uid="uid://3ytqxr2dncaq" path="res://character_body_2d.gd" id="1_ij6vw"]
+[ext_resource type="Texture2D" uid="uid://8nejdqkk2hky" path="res://recursos/★__ Concept art, Yuichi Mita's Old bedroom __★__Tags__#concept #conceptart #artist #lowbotomy #art (1).jpg" id="1_ij6vw"]
+[ext_resource type="PackedScene" uid="uid://clgid3goukd43" path="res://character_body_2d.tscn" id="2_ghijl"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ij6vw"]
-atlas = ExtResource("1_f50pn")
-region = Rect2(0, 0, 166, 375)
+[node name="Jogo" type="Node2D" unique_id=1758405476]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ghijl"]
-atlas = ExtResource("1_f50pn")
-region = Rect2(166, 0, 166, 375)
+[node name="fundo1" type="Sprite2D" parent="." unique_id=1756059833]
+position = Vector2(961.62506, 418.49997)
+scale = Vector2(2.635034, 1.8909464)
+texture = ExtResource("1_ij6vw")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_44cfe"]
-atlas = ExtResource("1_f50pn")
-region = Rect2(332, 0, 166, 375)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dd465"]
-atlas = ExtResource("1_f50pn")
-region = Rect2(498, 0, 166, 375)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lhvu3"]
-atlas = ExtResource("1_f50pn")
-region = Rect2(166, 0, 166, 375)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_4w4y4"]
-animations = [{
-"frames": [{
-"duration": 0.9,
-"texture": SubResource("AtlasTexture_ij6vw")
-}, {
-"duration": 0.9,
-"texture": SubResource("AtlasTexture_ghijl")
-}, {
-"duration": 0.9,
-"texture": SubResource("AtlasTexture_44cfe")
-}, {
-"duration": 0.9,
-"texture": SubResource("AtlasTexture_dd465")
-}],
-"loop": 1,
-"name": &"andar",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lhvu3")
-}],
-"loop": 1,
-"name": &"spike",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugcfa"]
-size = Vector2(179, 542)
-
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=975087875]
-script = ExtResource("1_ij6vw")
-
-[node name="spike" type="AnimatedSprite2D" parent="." unique_id=1605870330]
-position = Vector2(-1, -2)
-scale = Vector2(2.2274096, 1.9445)
-sprite_frames = SubResource("SpriteFrames_4w4y4")
-animation = &"spike"
-frame_progress = 0.056008678
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=887826092]
-position = Vector2(15.5, 33)
-shape = SubResource("RectangleShape2D_ugcfa")
+[node name="CharacterBody2D" parent="." unique_id=975087875 instance=ExtResource("2_ghijl")]
+position = Vector2(259, 545)
