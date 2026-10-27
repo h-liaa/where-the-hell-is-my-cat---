@@ -6,9 +6,9 @@
 [node name="Jogo" type="Node2D" unique_id=1758405476]
 
 [node name="fundo1" type="Sprite2D" parent="." unique_id=1756059833]
-position = Vector2(572, 303.00003)
-scale = Vector2(1.5748298, 1.4156379)
+position = Vector2(961.62506, 418.49997)
+scale = Vector2(2.635034, 1.8909464)
 texture = ExtResource("1_kxg5b")
 
 [node name="CharacterBody2D" parent="." unique_id=975087875 instance=ExtResource("2_evvns")]
-position = Vector2(154, 464)
+position = Vector2(259, 545)

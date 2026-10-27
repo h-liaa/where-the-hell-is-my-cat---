@@ -46,63 +46,63 @@ script = ExtResource("1_4xhoe")
 
 [node name="Fundo" type="Panel" parent="." unique_id=683427342]
 layout_mode = 0
-offset_left = -26.0
-offset_top = -51.0
-offset_right = 1211.0
-offset_bottom = 648.0
+offset_left = -35.0
+offset_top = 1.0
+offset_right = 1927.0
+offset_bottom = 891.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_ugcfa")
 
 [node name="where" type="Label" parent="." unique_id=1616483108]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 32.0
-offset_right = 466.0
-offset_bottom = 273.0
+offset_left = 172.0
+offset_top = 27.0
+offset_right = 860.0
+offset_bottom = 385.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9490196)
 theme_override_fonts/font = ExtResource("3_r6y2l")
-theme_override_font_sizes/font_size = 134
+theme_override_font_sizes/font_size = 200
 text = "Where"
 
 [node name="the" type="Label" parent="." unique_id=1135297812]
 layout_mode = 0
-offset_left = 486.0
-offset_top = 67.0
-offset_right = 738.0
-offset_bottom = 308.0
+offset_left = 890.0
+offset_top = 53.0
+offset_right = 1266.0
+offset_bottom = 411.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_r6y2l")
-theme_override_font_sizes/font_size = 134
+theme_override_font_sizes/font_size = 200
 text = "the"
 
 [node name="hell" type="Label" parent="." unique_id=1352090293]
 layout_mode = 0
-offset_left = 755.0
-offset_top = 67.0
-offset_right = 1053.0
-offset_bottom = 308.0
+offset_left = 1305.0
+offset_top = 84.0
+offset_right = 1750.0
+offset_bottom = 442.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_r6y2l")
-theme_override_font_sizes/font_size = 134
+theme_override_font_sizes/font_size = 200
 text = "hell"
 
 [node name="texto2" type="Label" parent="." unique_id=251318410]
 layout_mode = 0
-offset_left = 511.0
-offset_top = 166.0
-offset_right = 1133.0
-offset_bottom = 371.0
+offset_left = 1001.0
+offset_top = 220.0
+offset_right = 1916.0
+offset_bottom = 492.0
 theme_override_colors/font_color = Color(0.84020877, 0.773664, 0.8261439, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9098039)
 theme_override_fonts/font = ExtResource("4_86m8b")
-theme_override_font_sizes/font_size = 136
+theme_override_font_sizes/font_size = 200
 text = "is my Cat??"
 
 [node name="Spike" type="Sprite2D" parent="." unique_id=468868499]
-position = Vector2(312, 434.00003)
-scale = Vector2(1.0951988, 1.1193751)
+position = Vector2(351.00003, 602.00006)
+scale = Vector2(1.5244206, 1.5221875)
 texture = ExtResource("5_abuin")
 
 [node name="jogar" type="Button" parent="." unique_id=562785556]
@@ -111,10 +111,10 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 614.0
-offset_top = 21.0
-offset_right = -126.0
-offset_bottom = 116.0
+offset_left = 616.0
+offset_top = 122.0
+offset_right = -319.0
+offset_bottom = 209.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -128,10 +128,10 @@ text = "Jogar"
 
 [node name="sair" type="Button" parent="." unique_id=149458418]
 layout_mode = 0
-offset_left = 614.0
-offset_top = 444.0
-offset_right = 1026.0
-offset_bottom = 539.0
+offset_left = 617.0
+offset_top = 628.0
+offset_right = 1602.0
+offset_bottom = 715.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_r6y2l")
 theme_override_font_sizes/font_size = 48
@@ -141,13 +141,13 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_1gees")
 text = "Sair"
 
 [node name="linha" type="Sprite2D" parent="." unique_id=2017267444]
-position = Vector2(819.75, 444.99997)
-scale = Vector2(0.6193693, 0.74375)
+position = Vector2(1108.2813, 632)
+scale = Vector2(1.4753193, 0.74375)
 texture = ExtResource("6_nge5h")
 
 [node name="sparkle" type="Sprite2D" parent="." unique_id=906581519]
-position = Vector2(1086.0001, 565)
-scale = Vector2(0.8049996, 0.977)
+position = Vector2(1785, 755.00006)
+scale = Vector2(0.9884998, 1.1505)
 texture = ExtResource("7_l5g0s")
 
 [connection signal="pressed" from="jogar" to="." method="_on_jogar_pressed"]

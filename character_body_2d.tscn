@@ -52,17 +52,17 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ugcfa"]
-size = Vector2(83, 386.5)
+size = Vector2(179, 542)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=975087875]
 script = ExtResource("1_ij6vw")
 
 [node name="spike" type="AnimatedSprite2D" parent="." unique_id=1605870330]
-position = Vector2(-23.374998, -28.093733)
-scale = Vector2(1.6069278, 1.4725001)
+position = Vector2(-1, -2)
+scale = Vector2(2.2274096, 1.9445)
 sprite_frames = SubResource("SpriteFrames_4w4y4")
 animation = &"spike"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=887826092]
-position = Vector2(-24, 0.25)
+position = Vector2(15.5, 33)
 shape = SubResource("RectangleShape2D_ugcfa")
