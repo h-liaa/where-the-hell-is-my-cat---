@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://8nejdqkk2hky" path="res://recursos/★__ Concept art, Yuichi Mita's Old bedroom __★__Tags__#concept #conceptart #artist #lowbotomy #art (1).jpg" id="1_kxg5b"]
 [ext_resource type="PackedScene" uid="uid://clgid3goukd43" path="res://character_body_2d.tscn" id="2_evvns"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53b4e"]
+size = Vector2(1177, 23)
+
 [node name="Jogo" type="Node2D" unique_id=1758405476]
 
 [node name="fundo1" type="Sprite2D" parent="." unique_id=1756059833]
@@ -12,3 +15,9 @@ texture = ExtResource("1_kxg5b")
 
 [node name="CharacterBody2D" parent="." unique_id=975087875 instance=ExtResource("2_evvns")]
 position = Vector2(154, 464)
+
+[node name="chao" type="CharacterBody2D" parent="." unique_id=336045068]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao" unique_id=1192516621]
+position = Vector2(584, 667)
+shape = SubResource("RectangleShape2D_53b4e")
