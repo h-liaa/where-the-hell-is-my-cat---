@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://cjr3knxr1e8b7"]
+
+[ext_resource type="Script" uid="uid://3ytqxr2dncaq" path="res://character_body_2d.gd" id="1_c2wt1"]
+[ext_resource type="Texture2D" uid="uid://blax71ngm30q" path="res://personagem/Design_sem_nome__2_-removebg-preview.png" id="2_q2130"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4obgb"]
+atlas = ExtResource("2_q2130")
+region = Rect2(0, 0, 166, 375)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3kwt"]
+atlas = ExtResource("2_q2130")
+region = Rect2(166, 0, 166, 375)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xswob"]
+atlas = ExtResource("2_q2130")
+region = Rect2(332, 0, 166, 375)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82vy7"]
+atlas = ExtResource("2_q2130")
+region = Rect2(498, 0, 166, 375)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2wt1"]
+atlas = ExtResource("2_q2130")
+region = Rect2(498, 0, 166, 375)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ugcfa"]
+animations = [{
+"frames": [{
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_4obgb")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_j3kwt")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_xswob")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_82vy7")
+}],
+"loop": 1,
+"name": &"Andar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2wt1")
+}],
+"loop": 1,
+"name": &"Parar",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugcfa"]
+size = Vector2(133, 400)
+
+[node name="spike" type="CharacterBody2D" unique_id=1545626123]
+script = ExtResource("1_c2wt1")
+
+[node name="Animação personagem" type="AnimatedSprite2D" parent="." unique_id=749210367]
+position = Vector2(2.0000005, 5)
+scale = Vector2(1.4156626, 1.364)
+sprite_frames = SubResource("SpriteFrames_ugcfa")
+animation = &"Parar"
+
+[node name="Colisão personagem" type="CollisionShape2D" parent="." unique_id=109094004]
+position = Vector2(-4, 4)
+shape = SubResource("RectangleShape2D_ugcfa")

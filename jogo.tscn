@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://dqdl1rshpfjhf"]
 
-[ext_resource type="Texture2D" uid="uid://8nejdqkk2hky" path="res://recursos/★__ Concept art, Yuichi Mita's Old bedroom __★__Tags__#concept #conceptart #artist #lowbotomy #art (1).jpg" id="1_kxg5b"]
-[ext_resource type="PackedScene" uid="uid://clgid3goukd43" path="res://character_body_2d.tscn" id="2_evvns"]
+[ext_resource type="Texture2D" uid="uid://eadqo2dlhumi" path="res://recursos/download.jpg" id="1_kxg5b"]
+[ext_resource type="PackedScene" uid="uid://cjr3knxr1e8b7" path="res://jogador.tscn" id="3_1ap6j"]
 
-[node name="Jogo" type="Node2D" unique_id=1758405476]
+[node name="Jogo" type="Node2D" unique_id=340681977]
 
-[node name="fundo1" type="Sprite2D" parent="." unique_id=1756059833]
-position = Vector2(961.62506, 418.49997)
-scale = Vector2(2.635034, 1.8909464)
+[node name="Fundo" type="Sprite2D" parent="." unique_id=1186627806]
+position = Vector2(958.49994, 425)
+scale = Vector2(2.6046195, 2.0531404)
 texture = ExtResource("1_kxg5b")
 
-[node name="CharacterBody2D" parent="." unique_id=975087875 instance=ExtResource("2_evvns")]
-position = Vector2(259, 545)
+[node name="spike" parent="." unique_id=1545626123 instance=ExtResource("3_1ap6j")]
+position = Vector2(110, 553)
