@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dt0qlxmmrx4hk"]
+
+[ext_resource type="Texture2D" uid="uid://e73jvaj47ncd" path="res://recursos/ba78b7ee712ecb200abdf581d7ea1c3a.jpg" id="1_kwtpo"]
+[ext_resource type="Script" uid="uid://bqbr4rf3s332v" path="res://terceira.gd" id="1_yj5dd"]
+[ext_resource type="PackedScene" uid="uid://cjr3knxr1e8b7" path="res://jogador.tscn" id="2_yj5dd"]
+[ext_resource type="Texture2D" uid="uid://bgj4mgysrcnds" path="res://recursos/622411610984310084-removebg-preview.png" id="3_887br"]
+[ext_resource type="Script" uid="uid://6dch58frj83w" path="res://porta_1.gd" id="4_d33je"]
+[ext_resource type="Script" uid="uid://h0aio57iwd6k" path="res://porta_2.gd" id="5_a4mm7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugcfa"]
+size = Vector2(83.625, 224.84375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4w4y4"]
+size = Vector2(48.625, 71.40625)
+
+[node name="terceira" type="Node2D" unique_id=1506305505]
+script = ExtResource("1_yj5dd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=165978239]
+position = Vector2(563, 647)
+scale = Vector2(0.913125, 0.8882978)
+texture = ExtResource("1_kwtpo")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=740215820]
+
+[node name="porta1" type="Sprite2D" parent="Area2D" unique_id=1122227591]
+position = Vector2(990.99994, 714.00006)
+scale = Vector2(0.37833354, 0.53407043)
+texture = ExtResource("3_887br")
+script = ExtResource("4_d33je")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=783889242]
+position = Vector2(994, 732)
+shape = SubResource("RectangleShape2D_ugcfa")
+
+[node name="porta2" type="Sprite2D" parent="Area2D" unique_id=1717409732]
+position = Vector2(587, 573)
+scale = Vector2(0.19729154, 0.27142093)
+texture = ExtResource("3_887br")
+script = ExtResource("5_a4mm7")
+
+[node name="corpo" type="CollisionShape2D" parent="Area2D" unique_id=899078431]
+position = Vector2(589, 554.2969)
+shape = SubResource("RectangleShape2D_4w4y4")
+
+[node name="spike" parent="Area2D" unique_id=1545626123 instance=ExtResource("2_yj5dd")]
+position = Vector2(234, 724)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=751333841]
+position = Vector2(15.015621, 712.03125)
+scale = Vector2(0.44881943, 0.62443584)
+texture = ExtResource("3_887br")
+
+[connection signal="body_entered" from="Area2D" to="Area2D/spike" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D/porta1" method="_on_area_2d_body_entered"]

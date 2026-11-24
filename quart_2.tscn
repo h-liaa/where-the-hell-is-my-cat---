@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://0r7faakfcb8m"]
+
+[ext_resource type="Script" uid="uid://cf2twm15uvq1p" path="res://quart_2.gd" id="1_nq82b"]
+[ext_resource type="Texture2D" uid="uid://b2g5phjrfv4at" path="res://recursos/e08edcdd0eb32d29aadfcc0764f02c65.jpg" id="2_6l26l"]
+[ext_resource type="PackedScene" uid="uid://cjr3knxr1e8b7" path="res://jogador.tscn" id="2_nq82b"]
+
+[node name="quart2" type="Node2D" unique_id=2102579851]
+script = ExtResource("1_nq82b")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1668035167]
+position = Vector2(605, 713)
+scale = Vector2(1.5573798, 1.2581639)
+texture = ExtResource("2_6l26l")
+
+[node name="spike" parent="." unique_id=1545626123 instance=ExtResource("2_nq82b")]
+position = Vector2(234, 724)

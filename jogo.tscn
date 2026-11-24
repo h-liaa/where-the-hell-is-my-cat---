@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dqdl1rshpfjhf"]
 
+[ext_resource type="Script" uid="uid://certjatpc4rps" path="res://jogo.gd" id="1_45nkh"]
 [ext_resource type="Texture2D" uid="uid://eadqo2dlhumi" path="res://recursos/download.jpg" id="1_kxg5b"]
 [ext_resource type="PackedScene" uid="uid://cjr3knxr1e8b7" path="res://jogador.tscn" id="3_1ap6j"]
 [ext_resource type="FontFile" uid="uid://cnyx80gjhmsu4" path="res://recursos/Milesdane Trial.otf" id="3_yq54j"]
@@ -8,23 +9,24 @@
 [ext_resource type="Script" uid="uid://cn0s0t3sa3hvw" path="res://porta.gd" id="5_qn35j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ugcfa"]
-size = Vector2(100, 489)
+size = Vector2(97, 336)
 
 [node name="Jogo" type="Node2D" unique_id=340681977]
+script = ExtResource("1_45nkh")
 
 [node name="Fundo" type="Sprite2D" parent="." unique_id=1186627806]
-position = Vector2(1037.5, 425)
-scale = Vector2(2.8192935, 2.0531404)
+position = Vector2(669.99994, 504)
+scale = Vector2(1.8383151, 1.5217392)
 texture = ExtResource("1_kxg5b")
 
 [node name="spike" parent="." unique_id=1545626123 instance=ExtResource("3_1ap6j")]
 position = Vector2(167, 558)
 
 [node name="Label" type="Label" parent="." unique_id=2083209380]
-offset_left = 201.0
-offset_top = 430.0
-offset_right = 521.0
-offset_bottom = 497.0
+offset_left = 88.0
+offset_top = 392.0
+offset_right = 408.0
+offset_bottom = 459.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8980392)
 theme_override_fonts/font = ExtResource("3_yq54j")
 theme_override_font_sizes/font_size = 51
@@ -34,13 +36,13 @@ text = "Ache seu gato!!"
 script = ExtResource("4_8c340")
 
 [node name="porta" type="Sprite2D" parent="tras" unique_id=646851538]
-position = Vector2(1502, 511.00003)
-scale = Vector2(0.6388888, 0.9684116)
+position = Vector2(1035, 557)
+scale = Vector2(0.50874996, 0.74909747)
 texture = ExtResource("4_1ap6j")
 script = ExtResource("5_qn35j")
 
 [node name="portafor" type="CollisionShape2D" parent="tras" unique_id=1707556559]
-position = Vector2(1503, 519)
+position = Vector2(1040, 569)
 shape = SubResource("RectangleShape2D_ugcfa")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1853045874]
@@ -49,4 +51,5 @@ shape = SubResource("RectangleShape2D_ugcfa")
 offset_right = 40.0
 offset_bottom = 40.0
 
+[connection signal="area_shape_entered" from="tras" to="spike" method="_on_tras_area_shape_entered"]
 [connection signal="body_entered" from="tras" to="spike" method="_on_tras_body_entered"]
