@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bl2fh0w8kw0t5"]
+
+[ext_resource type="Script" uid="uid://dv8r1kwne1kk1" path="res://spike.gd" id="1_s41oj"]
+[ext_resource type="Texture2D" uid="uid://bjomqxb0g3sgm" path="res://recursos/download (1).jpg" id="2_bjba7"]
+[ext_resource type="PackedScene" uid="uid://cjr3knxr1e8b7" path="res://jogador.tscn" id="3_hs08j"]
+[ext_resource type="Texture2D" uid="uid://bgj4mgysrcnds" path="res://recursos/622411610984310084-removebg-preview.png" id="4_bjba7"]
+
+[node name="novacena" type="Node2D" unique_id=329832541]
+script = ExtResource("1_s41oj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1374714766]
+position = Vector2(962.75, 426.75)
+scale = Vector2(2.6156464, 2.059322)
+texture = ExtResource("2_bjba7")
+
+[node name="spike" parent="." unique_id=1545626123 instance=ExtResource("3_hs08j")]
+position = Vector2(90, 563)
+
+[node name="transicao" type="Area2D" parent="." unique_id=679947703]
+
+[node name="Sprite2D" type="Sprite2D" parent="transicao" unique_id=636545915]
+position = Vector2(1776, 503)
+scale = Vector2(0.7522221, 0.91245496)
+texture = ExtResource("4_bjba7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="transicao" unique_id=1255818201]

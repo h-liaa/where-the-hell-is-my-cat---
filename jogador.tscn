@@ -52,17 +52,30 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ugcfa"]
-size = Vector2(133, 400)
+size = Vector2(66, 244.25)
 
 [node name="spike" type="CharacterBody2D" unique_id=1545626123]
 script = ExtResource("1_c2wt1")
 
 [node name="Animação personagem" type="AnimatedSprite2D" parent="." unique_id=749210367]
-position = Vector2(2.0000005, 5)
-scale = Vector2(1.4156626, 1.364)
+position = Vector2(-1.9999998, 1.0000005)
+scale = Vector2(0.8365964, 0.8898332)
 sprite_frames = SubResource("SpriteFrames_ugcfa")
 animation = &"Parar"
 
 [node name="Colisão personagem" type="CollisionShape2D" parent="." unique_id=109094004]
-position = Vector2(-4, 4)
+position = Vector2(-1, 10)
 shape = SubResource("RectangleShape2D_ugcfa")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1765193273]
+position = Vector2(9, 32)
+zoom = Vector2(2.5, 2.5)
+limit_left = 28
+limit_top = -1000
+limit_right = 1346
+limit_bottom = 1000
+position_smoothing_enabled = true
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
