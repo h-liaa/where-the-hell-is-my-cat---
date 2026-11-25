@@ -54,10 +54,10 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ugcfa")
 
 [node name="where" type="Label" parent="." unique_id=1616483108]
 layout_mode = 0
-offset_left = 26.0
-offset_top = 20.0
-offset_right = 714.0
-offset_bottom = 378.0
+offset_left = 102.0
+offset_top = 12.0
+offset_right = 790.0
+offset_bottom = 370.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9490196)
 theme_override_fonts/font = ExtResource("3_r6y2l")
@@ -66,10 +66,10 @@ text = "Where"
 
 [node name="the" type="Label" parent="." unique_id=1135297812]
 layout_mode = 0
-offset_left = 730.0
-offset_top = 37.0
-offset_right = 1106.0
-offset_bottom = 395.0
+offset_left = 834.0
+offset_top = 43.0
+offset_right = 1210.0
+offset_bottom = 401.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_r6y2l")
@@ -78,10 +78,10 @@ text = "the"
 
 [node name="hell" type="Label" parent="." unique_id=1352090293]
 layout_mode = 0
-offset_left = 1117.0
-offset_top = 85.0
-offset_right = 1562.0
-offset_bottom = 443.0
+offset_left = 1226.0
+offset_top = 80.0
+offset_right = 1671.0
+offset_bottom = 438.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_r6y2l")
@@ -90,10 +90,10 @@ text = "hell"
 
 [node name="texto2" type="Label" parent="." unique_id=251318410]
 layout_mode = 0
-offset_left = 645.0
-offset_top = 207.0
-offset_right = 1560.0
-offset_bottom = 479.0
+offset_left = 805.0
+offset_top = 221.0
+offset_right = 1720.0
+offset_bottom = 493.0
 theme_override_colors/font_color = Color(0.84020877, 0.773664, 0.8261439, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9098039)
 theme_override_fonts/font = ExtResource("4_86m8b")
@@ -146,8 +146,8 @@ scale = Vector2(1.1175395, 0.74375)
 texture = ExtResource("6_nge5h")
 
 [node name="sparkle" type="Sprite2D" parent="." unique_id=906581519]
-position = Vector2(1356.4376, 738.81256)
-scale = Vector2(1.1622498, 1.2152501)
+position = Vector2(1391, 735.99994)
+scale = Vector2(1.2371247, 1.237625)
 texture = ExtResource("7_l5g0s")
 
 [connection signal="pressed" from="jogar" to="." method="_on_jogar_pressed"]

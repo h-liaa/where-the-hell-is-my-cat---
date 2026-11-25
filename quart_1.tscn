@@ -8,8 +8,8 @@
 script = ExtResource("1_ol18p")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=268295357]
-position = Vector2(619.56256, 710.5)
-scale = Vector2(1.0182445, 0.8702703)
+position = Vector2(701.0625, 703.5)
+scale = Vector2(1.154191, 0.8954954)
 texture = ExtResource("1_tw0xp")
 
 [node name="spike" parent="." unique_id=1545626123 instance=ExtResource("2_ol18p")]

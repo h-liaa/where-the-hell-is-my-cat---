@@ -1,15 +1,19 @@
 [gd_scene format=3 uid="uid://0r7faakfcb8m"]
 
 [ext_resource type="Script" uid="uid://cf2twm15uvq1p" path="res://quart_2.gd" id="1_nq82b"]
-[ext_resource type="Texture2D" uid="uid://b2g5phjrfv4at" path="res://recursos/e08edcdd0eb32d29aadfcc0764f02c65.jpg" id="2_6l26l"]
+[ext_resource type="Texture2D" uid="uid://c8l3ssv6tbl45" path="res://recursos/download (65).jpg" id="2_6l26l"]
 [ext_resource type="PackedScene" uid="uid://cjr3knxr1e8b7" path="res://jogador.tscn" id="2_nq82b"]
+[ext_resource type="PackedScene" uid="uid://dcf1vk5wgan6d" path="res://pocao.tscn" id="2_s40kq"]
 
 [node name="quart2" type="Node2D" unique_id=2102579851]
 script = ExtResource("1_nq82b")
 
+[node name="pocao" parent="." unique_id=847963324 instance=ExtResource("2_s40kq")]
+position = Vector2(845, 703)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1668035167]
-position = Vector2(605, 713)
-scale = Vector2(1.5573798, 1.2581639)
+position = Vector2(823.71454, 606)
+scale = Vector2(2.5477674, 1.857143)
 texture = ExtResource("2_6l26l")
 
 [node name="spike" parent="." unique_id=1545626123 instance=ExtResource("2_nq82b")]

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dcf1vk5wgan6d"]
+
+[ext_resource type="Script" uid="uid://dy5l21kr4d835" path="res://pocao.gd" id="1_3x37f"]
+[ext_resource type="Texture2D" uid="uid://d12i4wp3vg1tw" path="res://recursos/download__61_-removebg-preview.png" id="2_j7anu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bx8uf"]
+size = Vector2(42.625, 39.0625)
+
+[node name="pocao" type="Area2D" unique_id=847963324]
+script = ExtResource("1_3x37f")
+
+[node name="garrafa" type="Sprite2D" parent="." unique_id=1999490436]
+position = Vector2(9.536743e-07, -1.9073486e-06)
+scale = Vector2(0.15562502, 0.14662501)
+texture = ExtResource("2_j7anu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1428741038]
+position = Vector2(-4, 7)
+shape = SubResource("RectangleShape2D_bx8uf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

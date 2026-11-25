@@ -1,55 +1,55 @@
 [gd_scene format=3 uid="uid://bl2fh0w8kw0t5"]
 
 [ext_resource type="Script" uid="uid://dv8r1kwne1kk1" path="res://spike.gd" id="1_s41oj"]
-[ext_resource type="Texture2D" uid="uid://bjomqxb0g3sgm" path="res://recursos/download (1).jpg" id="2_bjba7"]
+[ext_resource type="Texture2D" uid="uid://cd4fyovw16cbr" path="res://recursos/download (66).jpg" id="2_bhasm"]
 [ext_resource type="PackedScene" uid="uid://cjr3knxr1e8b7" path="res://jogador.tscn" id="3_hs08j"]
-[ext_resource type="Texture2D" uid="uid://bgj4mgysrcnds" path="res://recursos/622411610984310084-removebg-preview.png" id="4_bjba7"]
 [ext_resource type="Script" uid="uid://beer3dcn0wcxe" path="res://transicao.gd" id="4_cflgt"]
 [ext_resource type="Script" uid="uid://c7tds0ulm81nx" path="res://portinha.gd" id="5_qde8r"]
+[ext_resource type="Texture2D" uid="uid://cd0y34xk5xth4" path="res://recursos/Buraco_do_Hobbit-removebg-preview.png" id="5_w31m7"]
 [ext_resource type="Script" uid="uid://be3yiy2u4515m" path="res://portaa.gd" id="6_bhasm"]
 [ext_resource type="Script" uid="uid://bse8gjvmp0sw1" path="res://collision_shape_2d_2.gd" id="6_cflgt"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugcfa"]
-size = Vector2(253.23083, 417.0739)
+[sub_resource type="CircleShape2D" id="CircleShape2D_a4mm7"]
+radius = 210.90485
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjba7"]
-size = Vector2(153.625, 297)
+[sub_resource type="CircleShape2D" id="CircleShape2D_d33je"]
+radius = 92.34717
 
 [node name="novacena" type="Node2D" unique_id=329832541]
 script = ExtResource("1_s41oj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1374714766]
-position = Vector2(589.00006, 554)
-scale = Vector2(1.6187073, 1.2161016)
-texture = ExtResource("2_bjba7")
+position = Vector2(844, 407)
+scale = Vector2(2.3300214, 2.6992755)
+texture = ExtResource("2_bhasm")
 
 [node name="spike" parent="." unique_id=1545626123 instance=ExtResource("3_hs08j")]
-position = Vector2(104, 577)
+position = Vector2(323, 529)
 
 [node name="transicao" type="Area2D" parent="." unique_id=679947703]
 script = ExtResource("4_cflgt")
 
 [node name="portaa" type="Sprite2D" parent="transicao" unique_id=636545915]
-position = Vector2(1042, 580)
-scale = Vector2(0.5491667, 0.73172385)
-texture = ExtResource("4_bjba7")
+position = Vector2(1099, 490)
+scale = Vector2(0.777427, 0.8217984)
+texture = ExtResource("5_w31m7")
 script = ExtResource("6_bhasm")
 
 [node name="portinha" type="Sprite2D" parent="transicao" unique_id=1197986950]
-position = Vector2(-39, 562)
-scale = Vector2(0.5488889, 0.7238267)
-texture = ExtResource("4_bjba7")
+position = Vector2(41, 514)
+scale = Vector2(0.87999994, 0.90999997)
+texture = ExtResource("5_w31m7")
 script = ExtResource("5_qde8r")
 
 [node name="antes" type="CollisionShape2D" parent="transicao" unique_id=1242374859]
-position = Vector2(-30, 583)
+position = Vector2(20.000004, 508)
 scale = Vector2(0.4788889, 0.635379)
-shape = SubResource("RectangleShape2D_ugcfa")
+shape = SubResource("CircleShape2D_a4mm7")
 script = ExtResource("6_cflgt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="transicao" unique_id=1255818201]
-position = Vector2(1060, 592)
-shape = SubResource("RectangleShape2D_bjba7")
+position = Vector2(1076, 470)
+shape = SubResource("CircleShape2D_d33je")
 
 [connection signal="body_entered" from="transicao" to="transicao/portaa" method="_on_transicao_body_entered"]
 [connection signal="body_entered" from="transicao" to="transicao/portinha" method="_on_transicao_body_entered"]
