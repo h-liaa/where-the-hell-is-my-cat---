@@ -6,57 +6,110 @@
 [ext_resource type="Texture2D" uid="uid://cd0y34xk5xth4" path="res://recursos/Buraco_do_Hobbit-removebg-preview.png" id="3_a4mm7"]
 [ext_resource type="Script" uid="uid://6dch58frj83w" path="res://porta_1.gd" id="4_d33je"]
 [ext_resource type="Script" uid="uid://h0aio57iwd6k" path="res://porta_2.gd" id="5_a4mm7"]
+[ext_resource type="PackedScene" uid="uid://bjurwjhugrsqs" path="res://menu_pausa.tscn" id="7_a4mm7"]
+[ext_resource type="Script" uid="uid://dvbfw5iu6bem7" path="res://portavolt.gd" id="8_ggcxq"]
+[ext_resource type="Texture2D" uid="uid://fbis05c5mrc7" path="res://recursos/2ede15ad2a9f41eb861206f405f60397-removebg-preview.png" id="9_7l73r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ggcxq"]
 radius = 75.00667
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_iq0l4"]
+radius = 126.30122
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_7l73r"]
 radius = 64.53681
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_iq0l4"]
-radius = 126.30122
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d33je"]
+size = Vector2(766.25, 378.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a4mm7"]
+size = Vector2(1919.75, 375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ggcxq"]
+size = Vector2(1108, 286)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7l73r"]
+size = Vector2(126, 714)
 
 [node name="terceira" type="Node2D" unique_id=1506305505]
 script = ExtResource("1_yj5dd")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=165978239]
-position = Vector2(716, 450)
-scale = Vector2(2.9172795, 2.4423075)
+position = Vector2(949.5, 455.49997)
+scale = Vector2(3.615809, 2.189904)
 texture = ExtResource("2_d33je")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=740215820]
-
-[node name="porta1" type="Sprite2D" parent="Area2D" unique_id=1122227591]
-position = Vector2(1052.0001, 638)
-scale = Vector2(0.65318406, 0.62768424)
-texture = ExtResource("3_a4mm7")
+[node name="Porta1" type="Area2D" parent="." unique_id=740215820]
+position = Vector2(24, 0)
 script = ExtResource("4_d33je")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=783889242]
+[node name="CorpoPorta1" type="CollisionShape2D" parent="Porta1" unique_id=783889242]
 position = Vector2(1047, 629)
 shape = SubResource("CircleShape2D_ggcxq")
 
-[node name="porta2" type="Sprite2D" parent="Area2D" unique_id=1717409732]
-position = Vector2(769, 288)
-scale = Vector2(0.47268295, 0.46300003)
+[node name="SpritePorta1" type="Sprite2D" parent="Porta1/CorpoPorta1" unique_id=1122227591]
+z_index = 1
+position = Vector2(5.000122, 9)
+scale = Vector2(0.65318406, 0.62768424)
 texture = ExtResource("3_a4mm7")
-script = ExtResource("5_a4mm7")
 
-[node name="corpo" type="CollisionShape2D" parent="Area2D" unique_id=899078431]
-position = Vector2(762, 277)
-shape = SubResource("CircleShape2D_7l73r")
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1368667964]
 
-[node name="spike" parent="Area2D" unique_id=1545626123 instance=ExtResource("2_yj5dd")]
-position = Vector2(268, 626)
+[node name="MenuPausa" parent="CanvasLayer" unique_id=716487499 instance=ExtResource("7_a4mm7")]
+process_mode = 3
+visible = false
 
-[node name="portavolt" type="Sprite2D" parent="Area2D" unique_id=751333841]
-position = Vector2(-21.999996, 607.00006)
+[node name="spike" parent="." unique_id=1545626123 instance=ExtResource("2_yj5dd")]
+position = Vector2(292, 626)
+
+[node name="Portavolt" type="Area2D" parent="." unique_id=1106904127]
+script = ExtResource("8_ggcxq")
+
+[node name="ColisaoPortavolt" type="CollisionShape2D" parent="Portavolt" unique_id=396502172]
+position = Vector2(-10, 594)
+shape = SubResource("CircleShape2D_iq0l4")
+
+[node name="SpritePortavolt" type="Sprite2D" parent="Portavolt/ColisaoPortavolt" unique_id=751333841]
+position = Vector2(12.000004, 13.000061)
 scale = Vector2(0.904, 0.89851457)
 texture = ExtResource("3_a4mm7")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=396502172]
-position = Vector2(-34, 594)
-shape = SubResource("CircleShape2D_iq0l4")
+[node name="Porta2" type="Area2D" parent="." unique_id=1908589869]
+position = Vector2(786, 277)
+script = ExtResource("5_a4mm7")
 
-[connection signal="body_entered" from="Area2D" to="Area2D/porta1" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Area2D" to="Area2D/spike" method="_on_area_2d_body_entered"]
+[node name="CorpoPorta2" type="CollisionShape2D" parent="Porta2" unique_id=899078431]
+shape = SubResource("CircleShape2D_7l73r")
+
+[node name="SpritePorta2" type="Sprite2D" parent="Porta2/CorpoPorta2" unique_id=1717409732]
+position = Vector2(7, 11)
+scale = Vector2(0.47268295, 0.46300003)
+texture = ExtResource("3_a4mm7")
+
+[node name="LimitesJogo" type="StaticBody2D" parent="." unique_id=1780731541]
+
+[node name="Limite1" type="CollisionShape2D" parent="LimitesJogo" unique_id=393510264]
+position = Vector2(264.875, 133.75)
+shape = SubResource("RectangleShape2D_d33je")
+
+[node name="Limite2" type="CollisionShape2D" parent="LimitesJogo" unique_id=1973546838]
+position = Vector2(937.125, 975.5)
+shape = SubResource("RectangleShape2D_a4mm7")
+
+[node name="Limite3" type="CollisionShape2D" parent="LimitesJogo" unique_id=98432205]
+position = Vector2(1448, 134)
+shape = SubResource("RectangleShape2D_ggcxq")
+
+[node name="Limite4" type="CollisionShape2D" parent="LimitesJogo" unique_id=1969522027]
+position = Vector2(1273, 540)
+shape = SubResource("RectangleShape2D_7l73r")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1365608838]
+position = Vector2(1198, 626.00006)
+scale = Vector2(0.38299996, 0.35349998)
+texture = ExtResource("9_7l73r")
+
+[connection signal="body_entered" from="Porta1" to="Porta1" method="_on_body_entered"]
+[connection signal="body_entered" from="Porta1" to="spike" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Portavolt" to="Portavolt" method="_on_body_entered"]
+[connection signal="body_entered" from="Porta2" to="Porta2" method="_on_body_entered"]

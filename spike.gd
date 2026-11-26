@@ -7,10 +7,7 @@ func _ready() -> void:
 
 
 
-func _process(delta: float) -> void:
-	pass
-	if Input.is_key_pressed(KEY_ESCAPE):
-		get_tree().quit()
+
 var tem_item_especial: bool = false
 
 func _body_entered(body: Node2D) -> void:

@@ -5,11 +5,21 @@
 [ext_resource type="PackedScene" uid="uid://cjr3knxr1e8b7" path="res://jogador.tscn" id="3_1ap6j"]
 [ext_resource type="FontFile" uid="uid://cnyx80gjhmsu4" path="res://recursos/Milesdane Trial.otf" id="3_yq54j"]
 [ext_resource type="Script" uid="uid://dha7dv36jx550" path="res://tras.gd" id="4_8c340"]
-[ext_resource type="Script" uid="uid://cn0s0t3sa3hvw" path="res://porta.gd" id="5_qn35j"]
 [ext_resource type="Texture2D" uid="uid://cd0y34xk5xth4" path="res://recursos/Buraco_do_Hobbit-removebg-preview.png" id="6_45nkh"]
+[ext_resource type="Script" uid="uid://bdsghu5m5umw7" path="res://portafor.gd" id="6_ysdx3"]
+[ext_resource type="PackedScene" uid="uid://bjurwjhugrsqs" path="res://menu_pausa.tscn" id="8_ysdx3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bhasm"]
 radius = 88.391174
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ysdx3"]
+size = Vector2(1916.5, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8pok"]
+size = Vector2(56, 850)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ysdx3"]
+radius = 89.88882
 
 [node name="Jogo" type="Node2D" unique_id=340681977]
 script = ExtResource("1_45nkh")
@@ -20,6 +30,7 @@ scale = Vector2(2.6256793, 2.0821257)
 texture = ExtResource("1_kxg5b")
 
 [node name="spike" parent="." unique_id=1545626123 instance=ExtResource("3_1ap6j")]
+z_index = 2
 position = Vector2(167, 558)
 
 [node name="Label" type="Label" parent="." unique_id=2083209380]
@@ -35,21 +46,45 @@ text = "Ache seu gato!!"
 [node name="tras" type="Area2D" parent="." unique_id=2046414225]
 script = ExtResource("4_8c340")
 
-[node name="porta" type="Sprite2D" parent="tras" unique_id=646851538]
-position = Vector2(1355, 506)
-scale = Vector2(0.6867673, 0.8105831)
-texture = ExtResource("6_45nkh")
-script = ExtResource("5_qn35j")
-
 [node name="portafor" type="CollisionShape2D" parent="tras" unique_id=1707556559]
 position = Vector2(1345, 484)
 shape = SubResource("CircleShape2D_bhasm")
+script = ExtResource("6_ysdx3")
+
+[node name="porta" type="Sprite2D" parent="tras/portafor" unique_id=646851538]
+position = Vector2(10, 22)
+scale = Vector2(0.6867673, 0.8105831)
+texture = ExtResource("6_45nkh")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1853045874]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1278486316]
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1650574887]
+
+[node name="MenuPausa" parent="CanvasLayer2" unique_id=716487499 instance=ExtResource("8_ysdx3")]
+process_mode = 3
+visible = false
+
+[node name="LimiteJogo" type="StaticBody2D" parent="." unique_id=1383987899]
+
+[node name="FormatoLimite" type="CollisionShape2D" parent="LimiteJogo" unique_id=1878144090]
+position = Vector2(971, 318)
+shape = SubResource("RectangleShape2D_ysdx3")
+
+[node name="FormatoLimite2" type="CollisionShape2D" parent="LimiteJogo" unique_id=824611715]
+position = Vector2(18, 415)
+shape = SubResource("RectangleShape2D_t8pok")
+
+[node name="FormatoLimite3" type="CollisionShape2D" parent="LimiteJogo" unique_id=461279261]
+position = Vector2(974, 850)
+shape = SubResource("RectangleShape2D_ysdx3")
+
+[node name="FormatoLimite4" type="CollisionShape2D" parent="LimiteJogo" unique_id=139926333]
+position = Vector2(961, 362)
+shape = SubResource("CircleShape2D_ysdx3")
 
 [connection signal="area_shape_entered" from="tras" to="spike" method="_on_tras_area_shape_entered"]
 [connection signal="body_entered" from="tras" to="spike" method="_on_tras_body_entered"]

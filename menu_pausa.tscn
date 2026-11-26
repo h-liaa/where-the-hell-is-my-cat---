@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://bjurwjhugrsqs"]
+
+[ext_resource type="FontFile" uid="uid://pieybsrw00uo" path="res://recursos/SpookyMagic.ttf" id="1_3ml7n"]
+[ext_resource type="Script" uid="uid://ch4tevmq1fvka" path="res://menu_pausa.gd" id="1_tyo0u"]
+[ext_resource type="Texture2D" uid="uid://db36emciqv4e0" path="res://recursos/871587334123423218-removebg-preview.png" id="2_tyo0u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f0gls"]
+bg_color = Color(0.17254902, 0.48235294, 0.84313726, 0.7176471)
+
+[sub_resource type="FontVariation" id="FontVariation_kso7j"]
+base_font = ExtResource("1_3ml7n")
+
+[sub_resource type="FontVariation" id="FontVariation_m1pn8"]
+base_font = ExtResource("1_3ml7n")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_atpth"]
+bg_color = Color(0.69411767, 0.5882353, 0.6745098, 1)
+border_width_bottom = 19
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wj3hg"]
+bg_color = Color(0.92941177, 0, 0.19215687, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8eh7v"]
+bg_color = Color(0.90588236, 0.42352942, 0.49411765, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_4gd8f"]
+base_font = ExtResource("1_3ml7n")
+
+[sub_resource type="FontVariation" id="FontVariation_0ajiv"]
+base_font = SubResource("FontVariation_4gd8f")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vf65x"]
+bg_color = Color(0.69411767, 0.5882353, 0.6745098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ml7n"]
+bg_color = Color(0.92941177, 0, 0.19215687, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tyo0u"]
+bg_color = Color(0.90588236, 0.42352942, 0.49411765, 1)
+
+[node name="MenuPausa" type="Control" unique_id=716487499]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tyo0u")
+
+[node name="Panel" type="Panel" parent="." unique_id=978505883]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -836.5
+offset_top = -279.0
+offset_right = 802.0
+offset_bottom = 344.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_f0gls")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=873151868]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -219.0
+offset_top = -105.5
+offset_right = 219.0
+offset_bottom = 105.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Pausado" type="Label" parent="VBoxContainer" unique_id=1350328549]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("FontVariation_kso7j")
+theme_override_font_sizes/font_size = 200
+text = "PAUSADO"
+
+[node name="Continuar" type="Button" parent="VBoxContainer" unique_id=1449748662]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_m1pn8")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_atpth")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wj3hg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8eh7v")
+text = "Continuar"
+
+[node name="Sair" type="Button" parent="VBoxContainer" unique_id=1892828912]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_0ajiv")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_vf65x")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3ml7n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tyo0u")
+text = "Sair "
+
+[node name="linha" type="Sprite2D" parent="VBoxContainer" unique_id=959520928]
+position = Vector2(562, 460.22656)
+scale = Vector2(1.6876876, 0.87320834)
+texture = ExtResource("2_tyo0u")
+
+[connection signal="pressed" from="VBoxContainer/Continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Sair" to="." method="_on_sair_pressed"]

@@ -4,6 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://c8l3ssv6tbl45" path="res://recursos/download (65).jpg" id="2_6l26l"]
 [ext_resource type="PackedScene" uid="uid://cjr3knxr1e8b7" path="res://jogador.tscn" id="2_nq82b"]
 [ext_resource type="PackedScene" uid="uid://dcf1vk5wgan6d" path="res://pocao.tscn" id="2_s40kq"]
+[ext_resource type="PackedScene" uid="uid://bjurwjhugrsqs" path="res://menu_pausa.tscn" id="5_s40kq"]
+[ext_resource type="Script" uid="uid://cn0s0t3sa3hvw" path="res://porta.gd" id="6_ngfba"]
+[ext_resource type="Texture2D" uid="uid://cd0y34xk5xth4" path="res://recursos/Buraco_do_Hobbit-removebg-preview.png" id="7_dlt31"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6l26l"]
+size = Vector2(1968.5, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s40kq"]
+size = Vector2(86, 873.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7fphv"]
+radius = 148.12157
 
 [node name="quart2" type="Node2D" unique_id=2102579851]
 script = ExtResource("1_nq82b")
@@ -12,9 +24,46 @@ script = ExtResource("1_nq82b")
 position = Vector2(845, 703)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1668035167]
-position = Vector2(823.71454, 606)
-scale = Vector2(2.5477674, 1.857143)
+position = Vector2(884, 565)
+scale = Vector2(2.9750001, 1.890625)
 texture = ExtResource("2_6l26l")
 
 [node name="spike" parent="." unique_id=1545626123 instance=ExtResource("2_nq82b")]
-position = Vector2(234, 724)
+position = Vector2(202, 801)
+
+[node name="Limites" type="StaticBody2D" parent="." unique_id=1370549112]
+
+[node name="Limite1" type="CollisionShape2D" parent="Limites" unique_id=31669545]
+position = Vector2(884, 989)
+shape = SubResource("RectangleShape2D_6l26l")
+
+[node name="Limite2" type="CollisionShape2D" parent="Limites" unique_id=1829710884]
+position = Vector2(1836, 565)
+shape = SubResource("RectangleShape2D_s40kq")
+
+[node name="Limite3" type="CollisionShape2D" parent="Limites" unique_id=1496848954]
+position = Vector2(884, 146)
+shape = SubResource("RectangleShape2D_6l26l")
+
+[node name="Limite4" type="CollisionShape2D" parent="Limites" unique_id=1078146486]
+position = Vector2(-68, 146)
+shape = SubResource("RectangleShape2D_s40kq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1223173079]
+
+[node name="MenuPausa" parent="CanvasLayer" unique_id=716487499 instance=ExtResource("5_s40kq")]
+process_mode = 3
+
+[node name="Porta" type="Area2D" parent="." unique_id=1995844758]
+script = ExtResource("6_ngfba")
+
+[node name="ColisaoPorta" type="CollisionShape2D" parent="Porta" unique_id=1394808887]
+position = Vector2(-68, 740)
+shape = SubResource("CircleShape2D_7fphv")
+
+[node name="ImagemPorta" type="Sprite2D" parent="Porta/ColisaoPorta" unique_id=2136243063]
+position = Vector2(7.6293945e-06, 29)
+scale = Vector2(0.954, 0.972)
+texture = ExtResource("7_dlt31")
+
+[connection signal="body_entered" from="Porta" to="Porta" method="_on_body_entered"]

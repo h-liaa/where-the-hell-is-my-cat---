@@ -38,7 +38,7 @@ animations = [{
 "duration": 0.8,
 "texture": SubResource("AtlasTexture_82vy7")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Andar",
 "speed": 5.0
 }, {
@@ -46,25 +46,25 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_c2wt1")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Parar",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ugcfa"]
-size = Vector2(66, 244.25)
+size = Vector2(80, 196)
 
 [node name="spike" type="CharacterBody2D" unique_id=1545626123]
 script = ExtResource("1_c2wt1")
 
 [node name="Animação personagem" type="AnimatedSprite2D" parent="." unique_id=749210367]
-position = Vector2(-1.9999998, 1.0000005)
-scale = Vector2(0.8365964, 0.8898332)
+position = Vector2(-6.218751, 29.421852)
+scale = Vector2(0.7857681, 0.73824996)
 sprite_frames = SubResource("SpriteFrames_ugcfa")
 animation = &"Parar"
 
 [node name="Colisão personagem" type="CollisionShape2D" parent="." unique_id=109094004]
-position = Vector2(-1, 10)
+position = Vector2(-5, 33)
 shape = SubResource("RectangleShape2D_ugcfa")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1765193273]

@@ -34,19 +34,13 @@ func _on_tras_body_entered(body: Node2D) -> void:
 	if body.name == "spike":
 		get_tree().change_scene_to_file("res://novacena.tscn")
 
-func _on_transicao_body_entered(body: Node2D) -> void:
-	pass
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	
 	if body.is_in_group("ItemColetavel"):
 		coletar_item_especial()
 		body.queue_free() 
 
-func _process(delta: float) -> void:
-	if Input.is_key_pressed(KEY_ESCAPE):
-		get_tree().quit()
+
 
 func coletar_item_especial() -> void:
 	tem_item_especial = true
