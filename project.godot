@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Where the hell is my cat???"
 run/main_scene="uid://bj6pn1stnpr6v"
-config/features=PackedStringArray("4.6", "Mobile")
+config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://recursos/icon.svg"
 
 [display]

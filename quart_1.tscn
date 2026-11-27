@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dc57s1hfbqxek" path="res://quart_1.gd" id="1_ol18p"]
 [ext_resource type="Texture2D" uid="uid://ca7nfh7gwuolj" path="res://recursos/9cd0c58904e727124c98851b1c353880.jpg" id="1_tw0xp"]
 [ext_resource type="PackedScene" uid="uid://cjr3knxr1e8b7" path="res://jogador.tscn" id="2_ol18p"]
+[ext_resource type="PackedScene" uid="uid://bjurwjhugrsqs" path="res://menu_pausa.tscn" id="4_8nyrc"]
 
 [node name="quart1" type="Node2D" unique_id=548431817]
 script = ExtResource("1_ol18p")
@@ -14,3 +15,9 @@ texture = ExtResource("1_tw0xp")
 
 [node name="spike" parent="." unique_id=1545626123 instance=ExtResource("2_ol18p")]
 position = Vector2(234, 724)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1839931253]
+
+[node name="MenuPausa" parent="CanvasLayer" unique_id=716487499 instance=ExtResource("4_8nyrc")]
+process_mode = 3
+visible = false

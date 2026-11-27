@@ -20,9 +20,6 @@ radius = 148.12157
 [node name="quart2" type="Node2D" unique_id=2102579851]
 script = ExtResource("1_nq82b")
 
-[node name="pocao" parent="." unique_id=847963324 instance=ExtResource("2_s40kq")]
-position = Vector2(845, 703)
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1668035167]
 position = Vector2(884, 565)
 scale = Vector2(2.9750001, 1.890625)
@@ -65,5 +62,8 @@ shape = SubResource("CircleShape2D_7fphv")
 position = Vector2(7.6293945e-06, 29)
 scale = Vector2(0.954, 0.972)
 texture = ExtResource("7_dlt31")
+
+[node name="pocao" parent="." unique_id=847963324 instance=ExtResource("2_s40kq")]
+position = Vector2(966, 556)
 
 [connection signal="body_entered" from="Porta" to="Porta" method="_on_body_entered"]

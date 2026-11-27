@@ -17,3 +17,6 @@ func _on_continuar_pressed() -> void:
 func _on_sair_pressed() -> void:
 	get_tree().paused = false
 	get_tree().quit()
+
+func _on_voltar_pressed() -> void:
+	get_tree().change_scene_to_file("res://recursos/menu.tscn")
